@@ -1,0 +1,69 @@
+/* General styling */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Neutral background */
+    transition: background-color 0.5s; /* Smooth transition for background color */
+}
+
+/* Centered container */
+#main-container {
+    text-align: center;
+}
+
+/* Styling for the name heading */
+h1 {
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+/* Profile picture styling */
+#profile-picture {
+    border-radius: 50%;
+    margin: 20px;
+    width: 150px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+/* Flag image styling */
+#country-flag {
+    width: 100px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    
+    margin-left: -95px;
+}
+
+/* Paragraph styling */
+p {
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Button styling */
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Hidden elements */
+#answer,
+#reset-button {
+    display: none;
+}
