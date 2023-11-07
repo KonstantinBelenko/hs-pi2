@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #ff7e5f,
+        #feb47b
+    ); /* Adjust colors as needed */
+}
+
+header {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.tile {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+    border-radius: 10px;
+    padding: 20px;
+    height: 150px; /* Adjust height as needed */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    background-image: url(./daniil.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.scale-on-hover {
+    transition: all 0.2s ease-in-out;
+}
+
+.scale-on-hover:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.scale-on-hover:active {
+    transform: rotate(180deg);
+    transform: scale(1);
+}
+
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+.loading {
+    animation: shake 0.3s infinite;
+}
