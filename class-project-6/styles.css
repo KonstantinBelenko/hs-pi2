@@ -1,0 +1,81 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6f0; /* A light pink background */
+    animation: bodyBgAnimation 5s infinite alternate;
+}
+
+@keyframes bodyBgAnimation {
+    from { background-color: #ffe6f0; }
+    to { background-color: #ccffcc; } /* A soft green */
+}
+
+#app {
+    text-align: center;
+    border: 5px double #ff00ff; /* A bright magenta border */
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    animation: appScale 3s infinite ease-in-out;
+}
+
+@keyframes appScale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+#drawingCanvas {
+    border: 4px dashed #0000ff; /* Solid blue border */
+    margin-top: 10px;
+    animation: canvasRotate 10s linear infinite;
+}
+
+@keyframes canvasRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.controls {
+    margin-top: 10px;
+    animation: controlsSlideIn 2s ease-out;
+}
+
+@keyframes controlsSlideIn {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #ff4500; /* Vivid orange background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #32cd32; /* Lime Green background */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+input[type="color"],
+input[type="range"] {
+    cursor: pointer;
+    border: 2px solid #ff1493; /* Deep pink border */
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="color"]:hover,
+input[type="range"]:hover {
+    border-color: #00bfff; /* Sky blue border */
+}
