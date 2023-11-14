@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h2>Canvas</h2>
+        <canvas id="drawingCanvas"></canvas>
+
+        <div class="controls">
+            <label for="drawCircle">Circle</label>
+            <button id="drawCircle">◯</button>
+
+            <label for="drawTriangle">Triangle</label>
+            <button id="drawTriangle">△</button>
+
+            <label for="drawRectangle">Rectangle</label>
+            <button id="drawRectangle">◻</button>
+
+            <label for="drawPencil">Pencil</label>
+            <button id="drawPencil">✎</button>
+
+            <label for="colorPicker">Color:</label>
+            <input type="color" id="colorPicker" value="#000000">
+
+            <label for="shapeSize">Shape Size:</label>
+            <input type="range" id="shapeSize" min="10" max="200" value="100">
+
+            <label for="lineWidthRange">Line Width:</label>
+            <input type="range" id="lineWidthRange" min="1" max="30" value="1">
+
+            <button id="resetCanvas">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
